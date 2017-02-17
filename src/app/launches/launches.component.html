@@ -1,0 +1,14 @@
+<section>
+  <div class="content">
+    <h1>Conflict Check Section</h1>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <app-launch-list (launchSelected)="selectedLaunch = $event"></app-launch-list>
+  </div>
+</section>
+<div class="modal-wrapper" *ngIf="selectedLaunch">
+  <app-launch-detail [selectedLaunch]="selectedLaunch"></app-launch-detail>
+  <div class="modal-background" (click)="onClose();"></div>
+</div>
