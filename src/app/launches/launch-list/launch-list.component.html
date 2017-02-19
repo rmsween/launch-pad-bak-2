@@ -7,5 +7,5 @@
     --><div class="launch-cell launch-cell__status">Status</div><!--
     --><div class="launch-cell launch-cell__daysLeft">Days Left</div><!--
   --></div>
-  <app-launch-item class="launch-row" *ngFor="let launch of launches" [launch]="launch" (click)="onSelected(launch);"></app-launch-item>
+  <app-launch-item *ngFor="let launch of launches; let i = index" [launch]="launch" [launchId]="i"></app-launch-item>
 </div>

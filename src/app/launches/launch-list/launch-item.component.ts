@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Launch } from '../launch';
 
@@ -7,13 +7,8 @@ import { Launch } from '../launch';
   selector: 'app-launch-item',
   templateUrl: './launch-item.component.html'
 })
-export class LaunchItemComponent implements OnInit {
+export class LaunchItemComponent {
   @Input() launch: Launch;
-  launchId: number;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() launchId: number;
 
 }

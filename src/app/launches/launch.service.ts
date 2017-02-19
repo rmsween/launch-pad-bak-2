@@ -15,4 +15,12 @@ export class LaunchService {
     return this.launches;
   }
 
+  getLaunch(id: number) {
+    return this.launches[id];
+  }
+
+  deleteLaunch(launch: Launch) {
+    this.launches.splice(this.launches.indexOf(launch), 1);
+  }
+
 }

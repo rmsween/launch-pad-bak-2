@@ -1,26 +1,29 @@
-<div class="modal">
-  <div class="modal-card">
-    <div class="modal-content">
-      <div class="input-field">
-        <label for="division">Division</label>
-        <input type="text" id="division" [value]="selectedLaunch.division">
+<div class="modal-wrapper">
+  <div class="modal">
+    <div class="modal-card">
+      <div class="modal-content">
+        <div class="input-field">
+          <label for="division">Division</label>
+          <input type="text" id="division" [value]="selectedLaunch?.division">
+        </div>
+        <div class="input-field">
+          <label for="project">Project</label>
+          <input type="text" id="project" [value]="selectedLaunch?.project">
+        </div>
+        <div class="input-field">
+          <label for="clientApproval">Client Approval</label>
+          <input type="text" id="clientApproval" [value]="selectedLaunch?.clientApproval">
+        </div>
+        <div class="input-field">
+          <label for="launchDate">Launch Date</label>
+          <input type="text" id="launchDate" [value]="selectedLaunch?.launchDate">
+        </div>
       </div>
-      <div class="input-field">
-        <label for="project">Project</label>
-        <input type="text" id="project" [value]="selectedLaunch.project">
+      <div class="modal-actions">
+        <a href="#" class="modal-button">UPDATE</a>
+        <a (click)="onDelete()" class="modal-button">DELETE</a>
       </div>
-      <div class="input-field">
-        <label for="clientApproval">Client Approval</label>
-        <input type="text" id="clientApproval" [value]="selectedLaunch.clientApproval">
-      </div>
-      <div class="input-field">
-        <label for="launchDate">Launch Date</label>
-        <input type="text" id="launchDate" [value]="selectedLaunch.launchDate">
-      </div>
-    </div>
-    <div class="modal-actions">
-      <a href="#" class="modal-button">UPDATE</a>
-      <a href="#" class="modal-button">DELETE</a>
     </div>
   </div>
+  <div class="modal-background" [routerLink]="['/launches']"></div>
 </div>
