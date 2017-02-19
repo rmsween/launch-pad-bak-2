@@ -100,7 +100,6 @@ header {
 }
 .header-row__actions .btn {
     background: transparent;
-    border: none;
     color: #fff;
     position: relative;
     min-width: 64px;

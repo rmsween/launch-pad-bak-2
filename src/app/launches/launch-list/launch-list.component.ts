@@ -22,4 +22,5 @@ export class LaunchListComponent implements OnInit {
   onSelected(launch: Launch) {
     this.launchSelected.emit(launch);
   }
+
 }

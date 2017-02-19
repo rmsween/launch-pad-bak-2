@@ -7,8 +7,7 @@ import { LaunchDetailComponent } from './launch-detail/launch-detail.component';
 @Component({
   moduleId: module.id,
   selector: 'app-launches',
-  templateUrl: './launches.component.html',
-  styleUrls: ['./launches.component.css']
+  templateUrl: './launches.component.html'
 })
 export class LaunchesComponent implements OnInit {
 
