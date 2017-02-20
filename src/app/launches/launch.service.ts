@@ -23,4 +23,12 @@ export class LaunchService {
     this.launches.splice(this.launches.indexOf(launch), 1);
   }
 
+  addLaunch(launch: Launch) {
+    this.launches.push(launch);
+  }
+
+  editLaunch(oldLaunch: Launch, newLaunch: Launch) {
+    this.launches[this.launches.indexOf(oldLaunch)] = newLaunch;
+  }
+
 }

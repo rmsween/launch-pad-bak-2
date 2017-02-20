@@ -1,3 +1,44 @@
-<p>
-  launch-new works!
-</p>
+<div class="modal-wrapper">
+    <form class="modal" [formGroup]="launchForm" (ngSubmit)="onSubmit();">
+        <div class="modal-card">
+            <div class="modal-content">
+                <div class="input-field">
+                    <label for="division">Division</label>
+                    <input
+                        type="text"
+                        id="division"
+                        class="form-control"
+                        formControlName="division">
+                </div>
+                <div class="input-field">
+                    <label for="project">Project</label>
+                    <input
+                        type="text"
+                        id="project"
+                        class="form-control"
+                        formControlName="project">
+                </div>
+                <div class="input-field datetime">
+                    <label for="clientApproval">Client Approval</label>
+                    <input
+                        type="text"
+                        id="clientApproval"
+                        class="form-control"
+                        formControlName="clientApproval">
+                </div>
+                <div class="input-field datetime">
+                    <label for="launchDate">Launch Date</label>
+                    <input
+                        type="text"
+                        id="launchDate"
+                        class="form-control"
+                        formControlName="launchDate">
+                </div>
+            </div>
+            <div class="modal-actions flex-wrapper"><!--
+        --><button type="submit" class="modal-button flex-grow">ADD LAUNCH</button><!--
+      --></div>
+        </div>
+    </form>
+    <div class="modal-background" (click)="onCancel();"></div>
+</div>

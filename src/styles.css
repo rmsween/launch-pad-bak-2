@@ -183,7 +183,7 @@ section .content {
     background-color: #fff;
     border: 1px solid #E1E8ED;
     max-width: 1006px;
-    margin: 32px auto;
+    margin: 0 auto;
     border-spacing: 0;
     padding-bottom: 24px;
 }
@@ -263,7 +263,7 @@ section .content {
 }
 .modal {
     width: 90%;
-    max-width: 544px;
+    max-width: 400px;
     height: auto;
     max-height: 90%;
     z-index: 999;
@@ -289,7 +289,7 @@ section .content {
     animation-fill-mode: forwards;
 }
 .modal-content {
-    padding: 24px 0;
+    padding: 40px 0;
 }
 .modal-actions {
     width: 100%;
@@ -303,6 +303,18 @@ section .content {
     text-align: center;
     display: inline-block;
     position: relative;
+    line-height: 46px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.modal-button:nth-of-type(2):after {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    height: 32px;
+    width: 1px;
+    background-color: #E1E8ED;
+    content: '';
 }
 @-webkit-keyframes modal-appear {
     from {
@@ -365,10 +377,11 @@ label {
     color: #797879;
 }
 input {
+    box-sizing: border-box;
     display: block;
     width: 100%;
-    height: 32px;
-    line-height: 32px;
+    height: 40px;
+    line-height: 40px;
     outline: 0;
     background: #FAFCFD;
     border: 2px solid #d6d6d6;
@@ -379,4 +392,67 @@ input {
     -webkit-transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
     transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
     padding: 0 12px;
+}
+input:focus {
+    border-color: #54b1fb;
+    color: #54b1fb;
+}
+#conflict form {
+    width: 100%;
+    max-width: 652px;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+#conflict .input-block {
+    display: inline-block;
+    max-width: 264px;
+    margin: 0 8px;
+}
+#conflict input {
+    height: 48px;
+    line-height: 48px;
+}
+#conflict .btn {
+    background-color: #8899A6;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
+    border-radius: 5px;
+    vertical-align: 2px;
+    font-size: 12px;
+}
+.input-block.datetime {
+    position: relative;
+    z-index: 5;
+}
+.input-block.datetime:after {
+    position: absolute;
+    bottom: 17px;
+    left: 16px;
+    content: '';
+    background-image: url('assets/img/icon-date.svg');
+    height: 16px;
+    width: 16px;
+    z-index: 6;
+}
+.input-block.datetime input {
+    padding-left: 40px;
+}
+.modal .input-field {
+    max-width: 260px;
+    margin: 0 auto 12px;
+    position: relative;
+}
+.modal .input-field.datetime input {
+    padding-left: 34px;
+}
+.modal .input-field.datetime:after {
+    position: absolute;
+    bottom: 13px;
+    left: 10px;
+    content: '';
+    background-image: url('assets/img/icon-date.svg');
+    height: 16px;
+    width: 16px;
+    z-index: 6;
 }

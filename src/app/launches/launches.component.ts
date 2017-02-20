@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Launch } from './launch';
 import { LaunchListComponent } from './launch-list/launch-list.component';
 import { LaunchDetailComponent } from './launch-detail/launch-detail.component';
+import { LaunchNewComponent } from './launch-new/launch-new.component';
 
 @Component({
   moduleId: module.id,

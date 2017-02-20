@@ -1,29 +1,41 @@
 <div class="modal-wrapper">
-  <div class="modal">
+  <form class="modal" [formGroup]="launchForm" (ngSubmit)="onSubmit();">
     <div class="modal-card">
       <div class="modal-content">
         <div class="input-field">
           <label for="division">Division</label>
-          <input type="text" id="division" [value]="selectedLaunch?.division">
+          <input
+            type="text"
+            id="division"
+            formControlName="division">
         </div>
         <div class="input-field">
           <label for="project">Project</label>
-          <input type="text" id="project" [value]="selectedLaunch?.project">
+          <input
+            type="text"
+            id="project"
+            formControlName="project">
         </div>
-        <div class="input-field">
+        <div class="input-field datetime">
           <label for="clientApproval">Client Approval</label>
-          <input type="text" id="clientApproval" [value]="selectedLaunch?.clientApproval">
+          <input
+            type="text"
+            id="clientApproval"
+            formControlName="clientApproval">
         </div>
-        <div class="input-field">
+        <div class="input-field datetime">
           <label for="launchDate">Launch Date</label>
-          <input type="text" id="launchDate" [value]="selectedLaunch?.launchDate">
+          <input
+            type="text"
+            id="launchDate"
+            formControlName="launchDate">
         </div>
       </div>
-      <div class="modal-actions">
-        <a href="#" class="modal-button">UPDATE</a>
-        <a (click)="onDelete()" class="modal-button">DELETE</a>
-      </div>
+      <div class="modal-actions flex-wrapper"><!--
+        --><button type="submit" class="modal-button flex-grow">UPDATE</button><!--
+        --><a (click)="onDelete()" class="modal-button flex-grow">DELETE</a><!--
+      --></div>
     </div>
-  </div>
+  </form>
   <div class="modal-background" [routerLink]="['/launches']"></div>
 </div>
